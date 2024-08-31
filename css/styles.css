@@ -13,67 +13,46 @@ body {
 }
 
 /* Typography */
-.header-1 {
-    font-family: 'Roboto', sans-serif;
+.header-one {
     font-weight: 700;
     font-size: 56px;
-    line-height: 60px;
-    letter-spacing: 1.12px;
+    line-height: 1.07;
+    letter-spacing: 0.02em;
 }
 
-.header-2 {
-    font-family: 'Roboto', sans-serif;
+.header-two {
     font-weight: 700;
     font-size: 36px;
-    line-height: 40px;
-    letter-spacing: 0.72px;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
 }
 
-.header-3 {
-    font-family: 'Roboto', sans-serif;
+.header-three {
     font-weight: 500;
     font-size: 20px;
-    line-height: 24px;
-    letter-spacing: 0.4px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
 }
 
 .body-text {
-    font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 16px;
-    line-height: 24px;
-    letter-spacing: 0.32px;
-    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
 }
 
-.small-text {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 14px;
-}
-
-.medium-text {
-    font-family: 'Roboto', sans-serif;
+.body-medium {
+    font-size: 16px;
     font-weight: 500;
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: 0.32px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
 }
 
 .button-text {
-    font-family: 'Roboto', sans-serif;
     font-weight: 500;
     font-size: 16px;
-    line-height: 24px;
-}
-
-.link-text {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 16px;
-    text-decoration: underline;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
 }
 
 /* Typography */
@@ -106,17 +85,31 @@ h6 {
     margin: 0;
 }
 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
 .container {
     width: 1158px;
     margin: 0 auto;
+    padding: 0 15px;
 }
 
 .section {
     padding: 120px 0;
 }
 
-/* HEADER */
-header {
+.header {
     border-bottom: 1px solid var(--CORNFLOWER);
     background: var(--WHITE);
 }
@@ -128,12 +121,11 @@ header {
     align-items: center;
 }
 
-nav {
+.navigation {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-
 
 .logo {
     color: var(--NAVY-BLUE);
@@ -145,7 +137,7 @@ nav {
     letter-spacing: 0.54px;
     text-transform: uppercase;
     text-decoration: none;
-    display: block;
+    display: inline-block;
 }
 
 .logo span {
@@ -193,37 +185,30 @@ header .logo {
     color: var(--SLATE);
 }
 
-/* HEADER */
-
 /* MAIN */
 .main-section {
     background: var(--NAVY-BLUE);
-}
-
-.main-section-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 48px;
+    padding: 188px 0;
 }
 
 .title {
     color: var(--WHITE);
     text-align: center;
-    width: 496px;
+    max-width: 496px;
+    margin: 0 auto 48px;
 }
 
 .main-button {
-    display: inline-flex;
+    display: block;
     padding: 16px 32px;
-    align-items: flex-start;
-    gap: 10px;
+    text-align: center;
+    margin: 0 auto;
     border-radius: 4px;
     background: var(--IRIS);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
     color: var(--WHITE);
     border: none;
+    height: 56px;
 }
 
 .main-button:hover {
@@ -267,7 +252,6 @@ header .logo {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 32px;
     border-radius: 0px 0px 4px 4px;
     background: var(--WHITE);
     box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 2px 1px 0px rgba(46, 47, 66, 0.08);
@@ -275,11 +259,19 @@ header .logo {
 
 .team-list-item img {
     width: 100%;
-    margin-bottom: 32px;
 }
 
-.team-list-item h3 {
+.team-list-item-container {
+    padding: 32px 0;
+}
+
+.team-list-item-header {
+    text-align: center;
     margin-bottom: 8px;
+}
+
+.team-list-item-text {
+    text-align: center;
 }
 
 .portfolio-section-title {
@@ -289,11 +281,11 @@ header .logo {
 }
 
 .portfolio-list {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    grid-gap: 48px 24px;
+    gap: 48px 24px;
 }
 
 .portfolio-list-item {
@@ -311,7 +303,7 @@ header .logo {
     border-right: 1px;
     border-bottom: 1px;
     border-left: 1px;
-    border-top: 0;
+    border-top: none;
     border-style: solid;
     border-color: var(--CORNFLOWER);
 }
@@ -322,12 +314,12 @@ header .logo {
 
 /* MAIN */
 
-footer {
+.footer {
     background: var(--NAVY-BLUE);
     padding: 100px 0;
 }
 
-footer .logo {
+.footer .logo {
     color: var(--CLOUD);
     margin-bottom: 18px;
 }
