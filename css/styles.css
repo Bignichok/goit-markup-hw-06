@@ -92,7 +92,6 @@ h6 {
     margin: -1px;
     border: 0;
     padding: 0;
-
     white-space: nowrap;
     clip-path: inset(100%);
     clip: rect(0 0 0 0);
@@ -248,7 +247,7 @@ header .logo {
 }
 
 .team-list-item {
-    flex: 1;
+    width: calc((100% - 72px) / 4);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -298,7 +297,7 @@ header .logo {
     width: 100%;
 }
 
-.portfolio-list-item-holder {
+.portfolio-list-item-container {
     padding: 32px 16px;
     border-right: 1px;
     border-bottom: 1px;
@@ -308,7 +307,7 @@ header .logo {
     border-color: var(--CORNFLOWER);
 }
 
-.portfolio-list-item-holder h3 {
+.portfolio-list-item-container h3 {
     margin-bottom: 8px;
 }
 
@@ -321,7 +320,7 @@ header .logo {
 
 .footer .logo {
     color: var(--CLOUD);
-    margin-bottom: 18px;
+    margin-bottom: 16px;
 }
 
 .footer-text {
