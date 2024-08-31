@@ -114,7 +114,6 @@ h6 {
 }
 
 .header-container {
-    padding: 24px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -154,6 +153,7 @@ h6 {
 }
 
 .navigation-list-item-link {
+    display: block;
     color: var(--NAVY-BLUE);
     position: relative;
     padding: 24px 0;
