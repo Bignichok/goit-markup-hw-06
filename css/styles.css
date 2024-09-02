@@ -175,6 +175,10 @@ h6 {
     transform: translateY(50%);
 }
 
+.address {
+    font-style: normal;
+}
+
 .address-list {
     display: flex;
     justify-content: space-between;
@@ -249,9 +253,6 @@ h6 {
 }
 
 .team-list-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     border-radius: 0px 0px 4px 4px;
     background: var(--WHITE);
     box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 2px 1px 0px rgba(46, 47, 66, 0.08);
@@ -291,8 +292,6 @@ h6 {
 
 .portfolio-list-item {
     background: var(--WHITE);
-    display: flex;
-    flex-direction: column;
 }
 
 .portfolio-list-item img {
