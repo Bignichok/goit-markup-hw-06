@@ -7,6 +7,7 @@
     --CORNFLOWER: #E7E9FC;
     --OCEAN: #404BBF;
     --GREY: rgba(46, 47, 66, 0.7);
+    --GREEN: #31D0AA;
 }
 
 body {
@@ -330,23 +331,46 @@ h6 {
 .portfolio-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     gap: 48px 24px;
 }
 
 .portfolio-list-item {
+    cursor: pointer;
     background: var(--WHITE);
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.portfolio-list-item-image-holder {
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio-list-item-image-holder-text {
+    padding: 40px 32px;
+    color: var(--CLOUD);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateY(100%);
+    background-color: var(--IRIS);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .portfolio-list-item:hover {
     box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 2px 1px 0px rgba(46, 47, 66, 0.08);
+}
 
+.portfolio-list-item:hover .portfolio-list-item-image-holder-text {
+    transform: translateY(0);
 }
 
 .portfolio-list-item img {
     width: 100%;
+    display: block;
 }
 
 .portfolio-list-item-container {
@@ -419,4 +443,9 @@ h6 {
 
 footer .social-media-links-list {
     gap: 16px;
+}
+
+footer .social-medial-link:hover,
+footer .social-medial-link:focus {
+    background-color: var(--GREEN);
 }
