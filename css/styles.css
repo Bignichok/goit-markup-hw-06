@@ -239,7 +239,7 @@ h6 {
     margin: 0 auto 48px;
 }
 
-.main-button {
+.button {
     display: block;
     padding: 16px 32px;
     text-align: center;
@@ -254,8 +254,8 @@ h6 {
     transition: background-color var(--ANIMATION);
 }
 
-.main-button:hover,
-.main-button:focus {
+.button:hover,
+.button:focus {
     background-color: var(--OCEAN);
 }
 
@@ -621,4 +621,48 @@ footer .social-medial-link:focus {
 .privacy-policy {
     text-decoration: underline;
     color: var(--IRIS);
+}
+
+.social-media-links-holder {
+    margin-right: 80px;
+}
+
+.subscribe-form {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.subscribe-footer {
+    color: var(--WHITE);
+    margin-bottom: 16px;
+}
+
+.email-input {
+    border: 1px solid var(--WHITE);
+    border-radius: 4px;
+    width: 264px;
+    height: 40px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+    padding: 8px 8px 8px 16px;
+    color: var(--WHITE);
+    background: transparent;
+    outline: none;
+}
+
+.email-input::placeholder {
+    color: var(--WHITE);
+}
+
+.subscribe-icon {
+    margin-left: 16px;
+}
+
+.subscribe-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 24px;
+    height: 40px;
+    min-width: 165px;
 }

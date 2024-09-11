@@ -53,7 +53,7 @@
         <section class="main-section">
             <div class="container">
                 <h1 class="title header-one">Effective Solutions for Your Business</h1>
-                <button class="main-button" type="button">Order Service</button>
+                <button class="button" type="button">Order Service</button>
             </div>
         </section>
 
@@ -385,7 +385,7 @@
                     marketing & growth solutions.
                 </p>
             </div>
-            <div>
+            <div class="social-media-links-holder">
                 <p class="body-medium social-media-text">Social media</p>
                 <ul class="social-media-links-list">
                     <li class="social-media-links-list">
@@ -418,9 +418,23 @@
                     </li>
                 </ul>
             </div>
+            <div>
+                <p class="subscribe-footer body-medium">Subscribe</p>
+                <form class="subscribe-form">
+                    <label for="subscribe">
+                        <input class="email-input small-text" placeholder="E-mail" type="email" id="subscribe"
+                            name="email" autofocus />
+                    </label>
+                    <button class="button subscribe-button" type="submit">Subscribe
+                        <svg class="subscribe-icon" width="24" height="24">
+                            <use href="./images/icons.svg#icon-telegram"></use>
+                        </svg>
+                    </button>
+                </form>
+            </div>
         </div>
     </footer>
-    <div class="modal-overlay is-open">
+    <div class="modal-overlay">
         <div class="modal">
             <button type="button" class="modal-close">
                 <svg class="close-icon" width="8" height="8">
@@ -473,7 +487,7 @@
                         <a class="privacy-policy small-text" href="#">Privacy Policy</a>
                     </label>
                 </div>
-                <button class="main-button button-text" type="submit">Send</button>
+                <button class="button button-text" type="submit">Send</button>
             </form>
         </div>
     </div>
