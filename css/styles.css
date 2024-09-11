@@ -475,7 +475,7 @@ footer .social-medial-link:focus {
     align-items: center;
     opacity: 0;
     pointer-events: none;
-    transition: opacity var(--ANIMATION);
+    transition: opacity var(--ANIMATION), visibility var(--ANIMATION);
 }
 
 .modal-overlay.is-open {
@@ -484,37 +484,50 @@ footer .social-medial-link:focus {
 }
 
 .modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
     width: 408px;
     background-color: var(--DAIRY);
     border-radius: 4px;
     padding: 24px;
+    padding-top: 72px;
     box-shadow: 0 2px 1px rgba(0, 0, 0, 0.20), 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 1px rgba(0, 0, 0, 0.14);
-    max-height: 80%;
+    min-height: 584px;
     overflow-y: auto;
+    transition: transform var(--ANIMATION);
+    transform: translate(-50%, -50%);
 }
 
 .modal-close {
+    position: absolute;
+    top: 24px;
+    right: 24px;
     width: 24px;
     height: 24px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: auto;
-    margin-bottom: 24px;
     border-radius: 50%;
     background-color: var(--CORNFLOWER);
     border: 1px solid rgba(0, 0, 0, 0.10);
+    padding: 0;
+    transition: background-color var(--ANIMATION), border var(--ANIMATION);
 }
 
 .modal-close:hover,
-.modal-close:active {
+.modal-close:focus {
     border: none;
     background-color: var(--OCEAN);
 }
 
 .modal-close:hover .close-icon,
-.modal-close:active .close-icon {
+.modal-close:focus .close-icon {
     fill: var(--WHITE);
+}
+
+.close-icon {
+    transition: fill var(--ANIMATION);
 }
 
 .modal-text {
@@ -533,6 +546,7 @@ footer .social-medial-link:focus {
     color: var(--LIGHT-SLATE);
     margin-bottom: 4px;
     display: block;
+    line-height: 1.17;
 }
 
 .input-holder {
@@ -549,8 +563,10 @@ footer .social-medial-link:focus {
     height: 40px;
     border-radius: 4px;
     border: 1px solid var(--NAVY-BLUE-MODAL);
-    outline: none;
-    padding: 8px 8px 8px 36px;
+    outline: transparent;
+    padding: 8px 8px 8px 38px;
+    background-color: transparent;
+    transition: border-color var(--ANIMATION);
 }
 
 .input:focus,
@@ -583,7 +599,11 @@ footer .social-medial-link:focus {
     border: 1px solid var(--NAVY-BLUE-MODAL);
     resize: none;
     padding: 8px 16px;
-    outline: none;
+    outline: transparent;
+    line-height: 1.17;
+    color: var(--NAVY-BLUE-MODAL);
+    background-color: transparent;
+    transition: border-color var(--ANIMATION);
 }
 
 .textarea:focus,
@@ -605,11 +625,14 @@ footer .social-medial-link:focus {
     align-items: center;
     margin-right: 8px;
     background-color: var(--CLOUD);
+    transition: background-color var(--ANIMATION), border var(--ANIMATION), fill var(--ANIMATION);
+    fill: transparent;
 }
 
 .label-checkbox {
     cursor: pointer;
     color: var(--LIGHT-SLATE);
+    line-height: 1.17;
 }
 
 .checkbox:checked+.label-checkbox>.custom-checkbox {
@@ -648,6 +671,7 @@ footer .social-medial-link:focus {
     color: var(--WHITE);
     background: transparent;
     outline: none;
+    line-height: 2;
 }
 
 .email-input::placeholder {
