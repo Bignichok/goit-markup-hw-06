@@ -50,13 +50,6 @@ h6 {
 }
 
 /* Typography */
-.header-one {
-    font-weight: 700;
-    font-size: 56px;
-    line-height: 1.07;
-    letter-spacing: 0.02em;
-}
-
 .header-two {
     font-weight: 700;
     font-size: 36px;
@@ -363,16 +356,49 @@ h6 {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    padding: 188px 0;
+    padding: 72px 0;
     max-width: 1440px;
     margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+    .main-section {
+        padding: 112px 0;
+    }
+}
+
+@media screen and (min-width: 1158px) {
+    .main-section {
+        padding: 188px 0;
+    }
 }
 
 .title {
     color: var(--WHITE);
     text-align: center;
-    max-width: 496px;
-    margin: 0 auto 48px;
+    margin: 0 auto 72px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    max-width: 216px;
+}
+
+@media screen and (min-width: 768px) {
+    .title {
+        max-width: 496px;
+        margin: 0 auto 36px;
+        font-weight: 700;
+        font-size: 56px;
+        line-height: 1.07;
+        letter-spacing: 0.02em;
+    }
+}
+
+@media screen and (min-width: 1158px) {
+    .main-section {
+        margin: 0 auto 48px;
+    }
 }
 
 .button {
