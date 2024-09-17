@@ -164,11 +164,44 @@ h6 {
     }
 }
 
+.mobile-header-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 0;
+}
+
+@media screen and (min-width: 768px) {
+    .mobile-header-container {
+        display: none;
+    }
+}
+
+.menu-button {
+    padding: 0;
+    display: block;
+    border: none;
+    width: 24px;
+    height: 24px;
+    background: none;
+}
+
 .mobile-menu {
     background-color: var(--WHITE);
     position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
     width: 100%;
     height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity var(--ANIMATION), visibility var(--ANIMATION);
+}
+
+.mobile-menu.is-open {
+    opacity: 1;
+    visibility: visible;
 }
 
 .mobile-menu-container {
@@ -592,7 +625,7 @@ footer .social-medial-link:focus {
     transform: translate(-50%, -50%);
 }
 
-.modal-close {
+.close-button {
     position: absolute;
     top: 24px;
     right: 24px;
@@ -606,16 +639,17 @@ footer .social-medial-link:focus {
     border: 1px solid rgba(0, 0, 0, 0.10);
     padding: 0;
     transition: background-color var(--ANIMATION), border var(--ANIMATION);
+    z-index: 2;
 }
 
-.modal-close:hover,
-.modal-close:focus {
+.close-button:hover,
+.close-button:focus {
     border: none;
     background-color: var(--OCEAN);
 }
 
-.modal-close:hover .close-icon,
-.modal-close:focus .close-icon {
+.close-button:hover .close-icon,
+.close-button:focus .close-icon {
     fill: var(--WHITE);
 }
 
