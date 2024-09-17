@@ -330,9 +330,19 @@ h6 {
 
 .address-list {
     display: flex;
-    justify-content: space-between;
-    gap: 40px;
+    flex-direction: column;
+    gap: 12px;
 }
+
+@media screen and (min-width: 1158px) {
+    .address-list {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 40px;
+    }
+
+}
+
 
 .address-list-item-link {
     color: var(--SLATE);
