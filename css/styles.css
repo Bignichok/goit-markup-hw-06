@@ -773,7 +773,8 @@ footer .social-medial-link:focus {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 408px;
+    width: calc(100% - 32px);
+    max-width: 408px;
     background-color: var(--DAIRY);
     border-radius: 4px;
     padding: 24px;
