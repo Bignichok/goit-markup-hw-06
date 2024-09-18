@@ -361,6 +361,14 @@ h6 {
     margin: 0 auto;
 }
 
+@media screen and (min-resolution: 192dpi) {
+    .main-section {
+        background-image:
+            linear-gradient(var(--GREY), var(--GREY)),
+            url('../images/hero-bg@2x.jpg');
+    }
+}
+
 @media screen and (min-width: 768px) {
     .main-section {
         padding: 112px 0;
@@ -712,7 +720,7 @@ h6 {
 
 .footer-wrapper {
     display: flex;
-    flex-wrap: wrap ;
+    flex-wrap: wrap;
     gap: 72px 24px;
     align-items: baseline;
 }
